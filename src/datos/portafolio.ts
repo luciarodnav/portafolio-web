@@ -79,7 +79,7 @@ export const obras: Obra[] = [
 export const cv = {
     formacion: [
         {
-            periodo: '2023 - actulidad',
+            periodo: '2023 - actualidad',
             titulo: 'Grado en Bellas Artes',
             centro: 'Facultad de Bellas Artes de San Carlos, UPV',
         },
