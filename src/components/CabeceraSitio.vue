@@ -27,7 +27,7 @@ const menuAbierto = ref(false)
 
 <template>
     <header class="flex flex-wrap items-center justify-between gap-4 px-6 py-5">
-    <RouterLink to="/" class="text-sm uppercase tracking-[0.25em]">
+    <RouterLink to="/" class="text-sm font-bold uppercase tracking-[0.25em]">
       {{ artista.nombre }}
     </RouterLink>
 
