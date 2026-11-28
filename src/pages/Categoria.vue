@@ -2,12 +2,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { Badge } from '@/components/ui/badge'
 import { obras } from '@/datos/portafolio'
 
 const route = useRoute()
 const obrasDeCategoria = computed(() =>
   obras.filter((obra) => obra.categoria === route.params.categoria),
 )
+
 </script>
 
 <template>
@@ -24,7 +26,10 @@ const obrasDeCategoria = computed(() =>
         class="aspect-video w-full bg-muted object-cover"
       />
       <h2 class="mt-3 text-3xl">{{ obra.titulo }}</h2>
-      <p class="text-muted-foreground">{{ obra.anio }} · {{ obra.tecnica }}</p>
-    </RouterLink>
+      <div class="mt-2 flex flex-wrap items-center gap-2 text-muted-foreground">
+        <Badge variant="secondary">{{ obra.anio }}</Badge>
+        <span>{{ obra.tecnica }}</span>
+      </div>
+      </RouterLink>
   </section>
 </template>
